@@ -1,0 +1,115 @@
+*
+    margin : 0px
+    padding : 0px
+    box-sizing: border-box
+    user-select: none
+
+body
+    background-color: #202020
+    height: 100vh
+    width: 100vw
+    overflow-x: hidden
+
+    // board where contain image
+    .board
+        width: 100%
+        display: flex
+        flex-flow: column wrap
+
+        .img
+            width: 100%
+    // end board
+
+    // show button which can show the panel
+    .show-button
+        width : 30px
+        height: 30px
+        position: absolute
+        left: 2px
+        top: 2px
+        opacity: 10%
+        display: flex
+        justify-content: center
+        align-items: center
+        color: aliceblue
+        background: inherit
+        box-shadow: 0 0 10px #000
+        transition: all 0.3s
+        cursor: pointer
+
+        &:hover
+            opacity: 90%
+            transform: scale(1.1)
+
+        &.hide
+            transform: translate(0px,-120%)
+    // end show button
+
+    // start panel
+    .panel
+        background-color: inherit
+        box-shadow: 0px 0px 10px #000
+        position: absolute
+        left : 20px 
+        top : 50%
+        width : 250px
+        height : 90vh
+        transform: translate(0px,-50%)
+        transition: all 0.4s
+        opacity: 95%
+
+        &.hide
+            transform: translate(-120%,-50%)
+
+        // start hide-button
+        .hide-button
+            position: absolute
+            right: 10px
+            top: 10px
+            font-size: 17px
+            height: 20px
+            width: 20px
+            background-color: inherit
+            box-shadow: 0px 0px 10px #000
+            color : aliceblue
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            opacity: 40%
+            transition: all 0.1s
+
+            &:hover
+                opacity: 100%
+                transform: scale(1.001)
+                cursor: pointer
+        // end hide-button
+        
+        .save-button
+            position: absolute
+            color: aliceblue
+            background: #005c1a
+            right: 20px
+            bottom: 20px
+            border: none
+            border-radius: 2px
+            font-size: 14px
+            padding: 10px 22px
+            cursor: pointer
+        // end panel
+
+        // start control-box
+        .control-box 
+            // start input-area
+            .input-area
+                background: aliceblue
+                font-size: 20px
+                font-weight: 300
+                text-align: center
+                width : 80%
+                margin : 30px auto
+                padding : 10px 0px
+                color : #202020
+                cursor : pointer
+            // end input area
+        // start control box
